@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="student-dashboard-bg">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-close">&#10005;</span>
+            <div class="sidebar-user">
+                <span class="sidebar-user-icon">&#128100;</span>
+                <span class="sidebar-user-info">Arjun,1939001</span>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="student.html">MY TIMETABLE</a>
+            <a href="profile.html">PROFILE</a>
+            <a href="announcements.html">ANNOUNCEMENTS</a>
+            <a href="teacher-info.html">Teacher Info</a>
+        </nav>
+        <button class="logout-btn" onclick="window.location.href='index.html'">
+            <span class="logout-icon">&#x1F6AA;</span> LOGOUT
+        </button>
+    </div>
+    <div class="main-content">
+        <div class="topbar">
+            <span class="dashboard-title">Dashboard</span>
+            <span class="topbar-icons">
+                <span class="topbar-icon">&#128100;</span>
+                <span class="topbar-icon">&#128276;</span>
+            </span>
+        </div>
+        <div class="timetable-container">
+            <table class="timetable">
+                <thead>
+                    <tr>
+                        <th>DAY/TIME</th>
+                        <th>9:00-9:55<br>Period 1</th>
+                        <th>10:00-10:55<br>Period 2</th>
+                        <th>11:00-11:55<br>Period 3</th>
+                        <th>12:00-12:55<br>Period 4</th>
+                        <th>1:00-2:00<br>Lunch Break</th>
+                        <th>2:00-2:55<br>Period 5</th>
+                        <th>3:00-3:55<br>Period 6</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Monday</th>
+                        <td class="subject">AIML<br>(CSE531P)</td>
+                        <td class="subject">Applied Industrial IoT</td>
+                        <td class="subject">IWP<br>(CSE534P)</td>
+                        <td class="meeting">MEETING</td>
+                        <td class="lunch" rowspan="6">L<br>U<br>N<br>C<br>H<br><br>B<br>R<br>E<br>A<br>K</td>
+                        <td class="subject">Internet Of Things<br>(CSEIOT532P)</td>
+                        <td class="subject">Cyber Forensics and Malware Detection<br>(CSHO533CSP)</td>
+                    </tr>
+                    <tr>
+                        <th>Tuesday</th>
+                        <td class="subject">CNS<br>(CSE535)</td>
+                        <td class="subject">DAA<br>(CSE533)</td>
+                        <td class="subject">IWP<br>(CSE534P)</td>
+                        <td class="empty"></td>
+                        <td class="subject">CNS<br>(CSE535)</td>
+                        <td class="subject">Service Learning</td>
+                    </tr>
+                    <tr>
+                        <th>Wednesday</th>
+                        <td class="subject">SE&PM<br>(HS522)</td>
+                        <td class="subject">AIML<br>(CSE531P)</td>
+                        <td class="subject">Applied Industrial IoT</td>
+                        <td class="empty"></td>
+                        <td class="subject">CNS<br>(CSE535)</td>
+                        <td class="subject">SE&PM<br>(HS522)</td>
+                    </tr>
+                    <tr>
+                        <th>Thursday</th>
+                        <td class="subject">Internet Of Things<br>(CSEIOT532P)</td>
+                        <td class="subject">DAA<br>(CSE533)</td>
+                        <td class="subject">AIML<br>(CSE531P)</td>
+                        <td class="empty"></td>
+                        <td class="subject">Cyber Forensics and Malware Detection<br>(CSHO533CSP)</td>
+                        <td class="empty"></td>
+                    </tr>
+                    <tr>
+                        <th>Friday</th>
+                        <td class="placements" colspan="4">Placements</td>
+                        <td class="subject">CNS<br>(CSE535)</td>
+                        <td class="subject">SE&PM<br>(HS522)</td>
+                    </tr>
+                    <tr>
+                        <th>Saturday</th>
+                        <td class="subject">Internet Of Things<br>(CSEIOT532P)</td>
+                        <td class="subject">AIML<br>(CSE531P)</td>
+                        <td class="mentoring">Mentoring</td>
+                        <td class="subject">IWP<br>(CSE534P)</td>
+                        <td class="empty"></td>
+                        <td class="empty"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html> 

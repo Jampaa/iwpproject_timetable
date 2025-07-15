@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="student-dashboard-bg">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-close">&#10005;</span>
+            <div class="sidebar-user">
+                <span class="sidebar-user-icon">&#128100;</span>
+                <span class="sidebar-user-info">RAHUL,ASST.PROF</span>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="teacher.html">MY TIMETABLE</a>
+            <a href="#" class="active">PROFILE</a>
+            <a href="announcements-teacher.html">ANNOUNCEMENTS</a>
+            <a href="substitution-request.html">Substitution Request</a>
+        </nav>
+        <button class="logout-btn" onclick="window.location.href='index.html'">
+            <span class="logout-icon">&#x1F6AA;</span> LOGOUT
+        </button>
+    </div>
+    <div class="main-content">
+        <div class="topbar">
+            <span class="dashboard-title">PROFILE</span>
+            <span class="topbar-icons">
+                <span class="topbar-icon">&#9881;</span>
+            </span>
+        </div>
+        <div class="teacher-profile-flex">
+            <div class="teacher-profile-left">
+                <img src="profile-pic.png" alt="Profile" class="profile-pic teacher-profile-pic">
+                <div class="teacher-info-card profile-info-card">
+                    <span class="profile-edit-icon">&#9998;</span>
+                    <div class="profile-info-text">
+                        <strong>RAHUL,CS25104</strong><br>
+                        ASST.PROFESSOR<br>
+                        CABIN: 3Block 2Floor 31<br>
+                        mail:rahul71@gmail.com
+                    </div>
+                </div>
+            </div>
+            <div class="teacher-profile-right">
+                <div class="teacher-info-card hours-card">
+                    <strong>Total Hours Completed: 64</strong><br>
+                    Remaining Hours: 21<br>
+                    Today: 4
+                </div>
+                <div class="teacher-info-card timetable-card">
+                    <strong>Assigned Timetable Preview</strong>
+                    <table class="timetable teacher-timetable" style="font-size: 0.95rem; margin-top: 0.7rem;">
+                        <thead>
+                            <tr>
+                                <th>DAY/TIME</th>
+                                <th>9:00-9:55<br>Period 1</th>
+                                <th>10:00-10:55<br>Period 2</th>
+                                <th>11:00-11:55<br>Period 3</th>
+                                <th>12:00-12:55<br>Period 4</th>
+                                <th>1:00-2:00<br>Lunch Break</th>
+                                <th>2:00-2:55<br>Period 5</th>
+                                <th>3:00-3:55<br>Period 6</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Monday</th>
+                                <td class="blue-cell">5BTCS A<br>301</td>
+                                <td class="peach-cell"></td>
+                                <td class="peach-cell"></td>
+                                <td class="blue-cell">3BTCIOT<br>221</td>
+                                <td class="lunch" rowspan="6">L<br>U<br>N<br>C<br>H<br><br>B<br>R<br>E<br>A<br>K</td>
+                                <td class="blue-cell">3BTCIOT<br>221</td>
+                                <td class="blue-cell">5BTCSIOT<br>511</td>
+                            </tr>
+                            <tr>
+                                <th>Tuesday</th>
+                                <td class="peach-cell"></td>
+                                <td class="green-cell">5BTCS A<br>Lab-220</td>
+                                <td class="peach-cell"></td>
+                                <td class="peach-cell"></td>
+                                <td class="blue-cell">3BTCIOT<br>221</td>
+                                <td class="peach-cell"></td>
+                            </tr>
+                            <tr>
+                                <th>Wednesday</th>
+                                <td class="blue-cell">5BTCSIOT<br>511</td>
+                                <td class="peach-cell"></td>
+                                <td class="blue-cell">3BTCIOT<br>221</td>
+                                <td class="peach-cell"></td>
+                                <td class="blue-cell">3BTCIOT<br>221</td>
+                                <td class="peach-cell"></td>
+                            </tr>
+                            <tr>
+                                <th>Thursday</th>
+                                <td class="peach-cell"></td>
+                                <td class="peach-cell"></td>
+                                <td class="peach-cell"></td>
+                                <td class="green-cell">5BTCSIOT<br>511</td>
+                                <td class="peach-cell"></td>
+                                <td class="peach-cell"></td>
+                            </tr>
+                            <tr>
+                                <th>Friday</th>
+                                <td class="peach-cell"></td>
+                                <td class="blue-cell">5BTCS A<br>301</td>
+                                <td class="peach-cell"></td>
+                                <td class="peach-cell"></td>
+                                <td class="blue-cell">5BTCS A<br>301</td>
+                                <td class="peach-cell"></td>
+                            </tr>
+                            <tr>
+                                <th>Saturday</th>
+                                <td class="green-cell">3BTCIOT<br>221</td>
+                                <td class="peach-cell"></td>
+                                <td class="peach-cell"></td>
+                                <td class="peach-cell"></td>
+                                <td class="blue-cell">5BTCSIOT<br>511</td>
+                                <td class="peach-cell"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

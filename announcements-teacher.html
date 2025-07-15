@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Announcements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="student-dashboard-bg">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-close">&#10005;</span>
+            <div class="sidebar-user">
+                <span class="sidebar-user-icon">&#128100;</span>
+                <span class="sidebar-user-info">RAHUL,ASST.PROF</span>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="teacher.html">MY TIMETABLE</a>
+            <a href="teacher-profile.html">PROFILE</a>
+            <a href="#" class="active">ANNOUNCEMENTS</a>
+            <a href="substitution-request.html">Substitution Request</a>
+        </nav>
+        <button class="logout-btn" onclick="window.location.href='index.html'">
+            <span class="logout-icon">&#x1F6AA;</span> LOGOUT
+        </button>
+    </div>
+    <div class="main-content">
+        <div class="topbar">
+            <span class="dashboard-title">ANNOUNCEMENTS</span>
+            <span class="topbar-icons">
+                <span class="topbar-icon">&#128276;</span>
+            </span>
+        </div>
+        <div class="announcements-content">
+            <div class="announcement-card announcement-meeting">
+                <span class="announcement-icon" style="color:#1976d2; font-size:1.3rem; margin-right:0.7rem;">&#128197;</span>
+                <div>
+                    <div class="announcement-title">Department Meeting</div>
+                    <div class="announcement-desc">There will be a department meeting on Friday at 3:00 PM in Room 201.</div>
+                    <div class="announcement-time">Today, 9:00 AM</div>
+                </div>
+            </div>
+            <div class="announcement-card announcement-substitution">
+                <span class="announcement-icon" style="color:#ff9800; font-size:1.3rem; margin-right:0.7rem;">&#128276;</span>
+                <div>
+                    <div class="announcement-title">Substitution Request</div>
+                    <div class="announcement-desc">You have a substitution request for 5BTCS A, Period 2, on Thursday.</div>
+                    <div class="announcement-time">Today, 8:30 AM</div>
+                </div>
+            </div>
+            <div class="announcement-card announcement-meeting">
+                <span class="announcement-icon" style="color:#1976d2; font-size:1.3rem; margin-right:0.7rem;">&#128197;</span>
+                <div>
+                    <div class="announcement-title">Staff Meeting</div>
+                    <div class="announcement-desc">Monthly staff meeting scheduled for next Monday at 10:00 AM.</div>
+                    <div class="announcement-time">Yesterday, 4:00 PM</div>
+                </div>
+            </div>
+            <div class="announcement-card announcement-substitution">
+                <span class="announcement-icon" style="color:#ff9800; font-size:1.3rem; margin-right:0.7rem;">&#128276;</span>
+                <div>
+                    <div class="announcement-title">Substitution Request</div>
+                    <div class="announcement-desc">You have a substitution request for 3BTCIOT, Period 5, on Friday.</div>
+                    <div class="announcement-time">2 days ago</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

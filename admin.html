@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .class-btns { display: flex; gap: 1rem; margin: 2rem 0 1.5rem 0; }
+        .class-btn { background: #ff9800; color: #fff; font-weight: bold; border: none; border-radius: 20px; padding: 0.7rem 2rem; font-size: 1.1rem; cursor: pointer; transition: background 0.2s; }
+        .class-btn.active, .class-btn:hover { background: #d84315; }
+        .admin-timetable-editable td { cursor: pointer; }
+        .admin-timetable-editable td.editing { background: #fffde7 !important; }
+        .admin-section { display: flex; gap: 2rem; margin-top: 2rem; }
+        .admin-card { background: #fff; border-radius: 16px; box-shadow: 0 4px 18px rgba(0,0,0,0.08); padding: 1.5rem 2rem; min-width: 300px; flex: 1; }
+        .admin-card h3 { margin-top: 0; color: #1976d2; }
+        .admin-announcement { background: #f7faff; border-radius: 10px; padding: 0.7rem 1rem; margin-bottom: 1rem; }
+        .admin-announcement-title { font-weight: bold; }
+        .admin-announcement-close { float: right; color: #888; cursor: pointer; font-size: 1.1rem; }
+    </style>
+</head>
+<body class="student-dashboard-bg">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-close">&#10005;</span>
+            <div class="sidebar-user">
+                <span class="sidebar-user-icon">&#128100;</span>
+                <span class="sidebar-user-info">ARJUN</span>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="active">CLASS</a>
+            <a href="admin-teacher.html">TEACHER</a>
+            <a href="#">SUBSTITUTION REQUEST</a>
+        </nav>
+        <button class="logout-btn" onclick="window.location.href='index.html'">
+            <span class="logout-icon">&#x1F6AA;</span> LOGOUT
+        </button>
+    </div>
+    <div class="main-content">
+        <div class="topbar">
+            <span class="dashboard-title">ADMIN</span>
+            <span class="topbar-icons">
+                <span class="topbar-icon">&#128100;</span>
+                <span class="topbar-icon">&#128276;</span>
+            </span>
+        </div>
+        <div class="class-btns">
+            <button class="class-btn active" onclick="showClass(0)">SEM1 A</button>
+            <button class="class-btn" onclick="showClass(1)">SEM1 B</button>
+            <button class="class-btn" onclick="showClass(2)">SEM1 C</button>
+        </div>
+        <div class="timetable-container">
+            <table class="timetable admin-timetable-editable" id="adminTimetable">
+                <!-- Timetable will be rendered by JS -->
+            </table>
+        </div>
+        <div class="admin-section">
+            <div class="admin-card">
+                <h3>Teacher details</h3>
+                <div><span style="color:#ffc107;">&#11088;</span> Dr Ram Singh <span style="color:#888;">M PHIL PHD</span> <span style="float:right;">CSEIOT532P</span></div>
+                <div><span style="color:#ffc107;">&#11088;</span> DR Mitul Raj <span style="color:#888;">PHD MD.</span> <span style="float:right;">CSE533</span></div>
+                <div><span style="color:#ffc107;">&#11088;</span> Prof RAJA <span style="color:#888;">M.tech</span> <span style="float:right;">cse521P</span></div>
+            </div>
+            <div class="admin-card">
+                <h3>Announcements</h3>
+                <div class="admin-announcement"><span class="admin-announcement-title">CIA 1 cse531</span> <span class="admin-announcement-close" onclick="this.parentElement.style.display='none'">&times;</span><br>Close book test on unit 1 date (27 July)</div>
+                <div class="admin-announcement"><span class="admin-announcement-title">Substitute teacher HS522</span> <span class="admin-announcement-close" onclick="this.parentElement.style.display='none'">&times;</span><br>Dr Ram will take class for 6th hour.</div>
+            </div>
+        </div>
+    </div>
+    <script>
+    // Example timetables for 3 classes
+    const timetables = [
+        [ // SEM1 A
+            ["DAY/TIME", "9:00-9:55<br>Period 1", "10:00-10:55<br>Period 2", "11:00-11:55<br>Period 3", "12:00-12:55<br>Period 4", "1:00-2:00<br>Lunch Break", "2:00-2:55<br>Period 5", "3:00-3:55<br>Period 6"],
+            ["Monday", "AIML<br>(CSE531P)", "Applied Industrial IoT", "IWP<br>(CSE534P)", "<span style='background:yellow;'>MEETING</span>", "LUNCH BREAK", "Internet Of Things<br>(CSEIOT532P)", "Cyber Forensics and Malware Detection<br>(CSHO533CSP)"],
+            ["Tuesday", "CNS<br>(CSE535)", "DAA<br>(CSE533)", "IWP<br>(CSE534P)", "", "LUNCH BREAK", "CNS<br>(CSE535)", "Service Learning"],
+            ["Wednesday", "SE&PM<br>(HS522)", "AIML<br>(CSE531P)", "Applied Industrial IoT", "", "LUNCH BREAK", "CNS<br>(CSE535)", "SE&PM<br>(HS522)"],
+            ["Thursday", "Internet Of Things<br>(CSEIOT532P)", "DAA<br>(CSE533)", "AIML<br>(CSE531P)", "", "LUNCH BREAK", "Cyber Forensics and Malware Detection<br>(CSHO533CSP)", ""],
+            ["Friday", "<span style='background:#bdbdbd;'>Placements</span>", "<span style='background:#bdbdbd;'>Placements</span>", "<span style='background:#bdbdbd;'>Placements</span>", "<span style='background:#bdbdbd;'>Placements</span>", "LUNCH BREAK", "CNS<br>(CSE535)", "SE&PM<br>(HS522)"],
+            ["Saturday", "Internet Of Things<br>(CSEIOT532P)", "AIML<br>(CSE531P)", "<span style='background:yellow;'>Mentoring</span>", "IWP<br>(CSE534P)", "LUNCH BREAK", "", ""]
+        ],
+        [ // SEM1 B
+            ["DAY/TIME", "9:00-9:55<br>Period 1", "10:00-10:55<br>Period 2", "11:00-11:55<br>Period 3", "12:00-12:55<br>Period 4", "1:00-2:00<br>Lunch Break", "2:00-2:55<br>Period 5", "3:00-3:55<br>Period 6"],
+            ["Monday", "Physics", "Math", "English", "", "LUNCH BREAK", "Biology", "Chemistry"],
+            ["Tuesday", "Math", "Physics", "Chemistry", "", "LUNCH BREAK", "English", "Biology"],
+            ["Wednesday", "Biology", "English", "Math", "", "LUNCH BREAK", "Physics", "Chemistry"],
+            ["Thursday", "Chemistry", "Biology", "English", "", "LUNCH BREAK", "Math", "Physics"],
+            ["Friday", "", "", "", "", "LUNCH BREAK", "", ""],
+            ["Saturday", "", "", "", "", "LUNCH BREAK", "", ""]
+        ],
+        [ // SEM1 C
+            ["DAY/TIME", "9:00-9:55<br>Period 1", "10:00-10:55<br>Period 2", "11:00-11:55<br>Period 3", "12:00-12:55<br>Period 4", "1:00-2:00<br>Lunch Break", "2:00-2:55<br>Period 5", "3:00-3:55<br>Period 6"],
+            ["Monday", "Math", "English", "Physics", "", "LUNCH BREAK", "Chemistry", "Biology"],
+            ["Tuesday", "English", "Math", "Biology", "", "LUNCH BREAK", "Physics", "Chemistry"],
+            ["Wednesday", "Chemistry", "Physics", "Math", "", "LUNCH BREAK", "English", "Biology"],
+            ["Thursday", "Biology", "Chemistry", "English", "", "LUNCH BREAK", "Math", "Physics"],
+            ["Friday", "", "", "", "", "LUNCH BREAK", "", ""],
+            ["Saturday", "", "", "", "", "LUNCH BREAK", "", ""]
+        ]
+    ];
+    let currentClass = 0;
+    function showClass(idx) {
+        currentClass = idx;
+        document.querySelectorAll('.class-btn').forEach((btn, i) => btn.classList.toggle('active', i === idx));
+        renderTimetable();
+    }
+    function renderTimetable() {
+        const table = document.getElementById('adminTimetable');
+        table.innerHTML = '';
+        const data = timetables[currentClass];
+        for (let i = 0; i < data.length; i++) {
+            const row = document.createElement('tr');
+            for (let j = 0; j < data[i].length; j++) {
+                const cell = document.createElement(i === 0 ? 'th' : 'td');
+                cell.innerHTML = data[i][j];
+                if (i > 0 && j > 0 && data[i][0] !== 'Friday' && data[i][0] !== 'Saturday' && data[i][j] !== 'LUNCH BREAK') {
+                    cell.onclick = function() { editCell(i, j, cell); };
+                }
+                row.appendChild(cell);
+            }
+            table.appendChild(row);
+        }
+    }
+    function editCell(i, j, cell) {
+        if (cell.classList.contains('editing')) return;
+        cell.classList.add('editing');
+        const oldValue = cell.innerHTML.replace(/<[^>]+>/g, '');
+        cell.innerHTML = `<input type='text' value='${oldValue}' style='width:90%;font-size:1rem;'>`;
+        const input = cell.querySelector('input');
+        input.focus();
+        input.onblur = function() {
+            timetables[currentClass][i][j] = input.value;
+            renderTimetable();
+        };
+        input.onkeydown = function(e) {
+            if (e.key === 'Enter') input.blur();
+        };
+    }
+    // Initial render
+    showClass(0);
+    </script>
+</body>
+</html> 

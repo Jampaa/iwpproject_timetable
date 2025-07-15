@@ -1,0 +1,704 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80vw;
+    max-width: 900px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 0.75rem 1rem;
+    text-align: center;
+}
+
+th {
+    background: #34495e;
+    color: #fff;
+}
+
+tr:nth-child(even) td {
+    background: #f9f9f9;
+}
+
+#timetable td[colspan] {
+    background: #e1e1e1;
+    font-weight: bold;
+}
+
+.current-day {
+    background: #ffe082 !important;
+} 
+
+body.login-bg {
+    background: #c7d7e6;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background: linear-gradient(160deg, #fff 60%, #1e90ff 100%);
+    border: 2px solid #7a8fa6;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    width: 400px;
+    max-width: 90vw;
+    padding: 2.5rem 2rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    width: 80px;
+    margin-bottom: 0.5rem;
+}
+
+.login-container h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0 0 1.5rem 0;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    align-self: flex-start;
+    font-weight: bold;
+    margin: 0.5rem 0 0.2rem 0.5rem;
+    color: #222;
+    letter-spacing: 1px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 90%;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 20px;
+    background: #e6e6e6;
+    font-size: 1rem;
+    outline: none;
+}
+
+.role-select {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.role-select label {
+    font-weight: normal;
+    color: #222;
+    font-size: 1rem;
+    margin: 0;
+}
+
+input[type="radio"] {
+    margin-right: 0.3rem;
+}
+
+.login-btn {
+    width: 60%;
+    padding: 0.7rem 0;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0.7rem;
+    transition: background 0.2s;
+}
+
+.login-btn:hover {
+    background: #125ea8;
+}
+
+.forgot {
+    margin-top: 0.2rem;
+}
+
+.forgot a {
+    color: #1976d2;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+} 
+
+/* Sidebar styles */
+.student-dashboard-bg {
+    background: #f4f4f4;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    width: 240px;
+    background: #0080e8;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+.sidebar-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.sidebar-close {
+    align-self: flex-end;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar-user-icon {
+    font-size: 1.5rem;
+}
+
+.sidebar-user-info {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.sidebar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: auto;
+    padding-left: 1.2rem;
+}
+
+.sidebar-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.05rem;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.sidebar-nav a.active,
+.sidebar-nav a:hover {
+    color: #ffe082;
+}
+
+.logout-btn {
+    background: #ff2222;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 0.7rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 2rem 0 1rem 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+}
+.logout-btn:hover {
+    background: #c40000;
+}
+.logout-icon {
+    font-size: 1.3rem;
+}
+
+/* Main content styles */
+.main-content {
+    margin-left: 240px;
+    width: calc(100vw - 240px);
+    min-height: 100vh;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar {
+    width: 100%;
+    background: #e0e0e0;
+    padding: 1rem 2rem 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+}
+.dashboard-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #222;
+}
+.topbar-icons {
+    display: flex;
+    gap: 1.2rem;
+}
+.topbar-icon {
+    font-size: 1.5rem;
+    color: #222;
+    cursor: pointer;
+}
+
+.timetable-container {
+    padding: 2rem 1rem 1rem 1rem;
+    overflow-x: auto;
+}
+
+.timetable {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 900px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.timetable th, .timetable td {
+    border: 1px solid #888;
+    padding: 0.7rem 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    min-width: 110px;
+}
+.timetable th {
+    background: #b3d1ee;
+    color: #222;
+    font-weight: bold;
+}
+.timetable .subject {
+    background: #cde8c5;
+    color: #222;
+    font-weight: 500;
+}
+.timetable .meeting, .timetable .mentoring {
+    background: #fff700;
+    color: #222;
+    font-weight: bold;
+}
+.timetable .placements {
+    background: #bdbdbd;
+    color: #222;
+    font-weight: bold;
+    text-align: center;
+}
+.timetable .lunch {
+    background: #f4f4f4;
+    color: #222;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+.timetable .empty {
+    background: #e0e0e0;
+}
+
+/* --- Teacher Info Page Beautification --- */
+.teacher-info-content {
+    padding: 2rem 2rem 1rem 2rem;
+}
+.teacher-search-bar {
+    display: flex;
+    align-items: center;
+    background: #ffc107;
+    border-radius: 30px;
+    padding: 0.7rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    max-width: 700px;
+    width: 100%;
+    font-size: 1.1rem;
+}
+.search-label {
+    font-weight: bold;
+    margin-right: 1rem;
+    color: #222;
+    letter-spacing: 1px;
+}
+.teacher-search-input {
+    flex: 1;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-right: 1rem;
+    outline: none;
+    background: #fffbe7;
+}
+.search-icon {
+    font-size: 1.5rem;
+    color: #222;
+    cursor: pointer;
+}
+.teacher-list {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    padding: 1.5rem 2rem;
+    max-width: 700px;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+.teacher-list-title {
+    font-size: 1.1rem;
+    color: #888;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+}
+.teacher-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f7faff;
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.1rem;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+.teacher-card:hover {
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    background: #eaf6ff;
+}
+.teacher-star {
+    color: #ffc107;
+    font-size: 1.3rem;
+    margin-right: 1.2rem;
+}
+.teacher-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #222;
+    margin-right: 1.2rem;
+    min-width: 120px;
+}
+.teacher-role {
+    color: #4a90e2;
+    font-size: 1rem;
+    margin-right: 1.2rem;
+    min-width: 120px;
+}
+.teacher-cabin {
+    color: #222;
+    font-size: 1rem;
+    font-weight: 500;
+    min-width: 90px;
+    text-align: right;
+}
+@media (max-width: 900px) {
+    .teacher-info-content, .teacher-list {
+        padding: 1rem;
+        max-width: 100%;
+    }
+    .teacher-search-bar {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        margin-left: 0;
+        width: 100vw;
+    }
+    .sidebar {
+        position: absolute;
+        z-index: 100;
+    }
+} 
+
+/* --- Profile Page Beautification --- */
+.profile-content.student-profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 3rem;
+}
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    margin-bottom: 1.5rem;
+    border: 4px solid #fff;
+    background: #eaf6ff;
+}
+.student-profile-info {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    padding: 2rem 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    min-width: 300px;
+}
+.student-profile-info h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.6rem;
+    color: #1976d2;
+}
+.student-profile-info p {
+    margin: 0.3rem 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* --- Announcements Page Beautification --- */
+.announcements-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+.announcement-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+.announcement-card:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+    background: #f7faff;
+}
+.announcement-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1976d2;
+    margin-bottom: 0.5rem;
+}
+.announcement-desc {
+    color: #333;
+    font-size: 1.05rem;
+    margin-bottom: 0.7rem;
+}
+.announcement-time {
+    color: #888;
+    font-size: 0.98rem;
+    align-self: flex-end;
+}
+
+@media (max-width: 700px) {
+    .student-profile-info, .announcement-card {
+        padding: 1rem 0.7rem;
+        min-width: unset;
+        max-width: 98vw;
+    }
+    .profile-content.student-profile-content {
+        margin-top: 1.2rem;
+    }
+    .announcements-content {
+        margin-top: 1rem;
+    }
+} 
+
+/* --- Teacher Dashboard Styles --- */
+.teacher-info-cards {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0 1.5rem 0;
+    justify-content: flex-start;
+}
+.teacher-info-card.yellow-card {
+    background: #ffc107;
+    color: #222;
+    font-weight: bold;
+    font-size: 1.15rem;
+    border-radius: 30px;
+    padding: 1rem 2.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    min-width: 260px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.teacher-timetable th {
+    background: #fff8e1;
+    color: #222;
+    font-weight: bold;
+}
+.teacher-timetable .blue-cell {
+    background: #90caf9;
+    color: #222;
+    font-weight: 500;
+}
+.teacher-timetable .green-cell {
+    background: #a5d6a7;
+    color: #222;
+    font-weight: 500;
+}
+.teacher-timetable .peach-cell {
+    background: #ffe0b2;
+    color: #222;
+}
+.teacher-timetable .lunch {
+    background: #f4f4f4;
+    color: #222;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+@media (max-width: 900px) {
+    .teacher-info-cards {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+    .teacher-info-card.yellow-card {
+        min-width: unset;
+        width: 100%;
+    }
+} 
+
+/* --- Teacher Profile Page Layout --- */
+.teacher-profile-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin: 2.5rem 2rem 0 2rem;
+    align-items: flex-start;
+}
+.teacher-profile-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 220px;
+    flex: 1 1 220px;
+    gap: 1.5rem;
+}
+.teacher-profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    border: 4px solid #fff;
+    background: #eaf6ff;
+    margin-bottom: 0.5rem;
+}
+.teacher-info-card {
+    background: #ededed;
+    border-radius: 20px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+    padding: 1.2rem 2rem;
+    min-width: 220px;
+    text-align: center;
+    font-size: 1.1rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+.profile-info-card {
+    background: #ededed;
+    font-weight: bold;
+}
+.profile-edit-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.3rem;
+    color: #888;
+}
+.teacher-profile-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2 1 320px;
+    gap: 2.5rem;
+    min-width: 320px;
+}
+.hours-card {
+    background: #ccc;
+    font-weight: bold;
+    font-size: 1.15rem;
+    padding: 2.2rem 2.5rem;
+}
+.timetable-card {
+    background: #fff;
+    padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+}
+.timetable-card strong {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    display: block;
+}
+@media (max-width: 900px) {
+    .teacher-profile-flex {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1.2rem 0.5rem 0 0.5rem;
+    }
+    .teacher-profile-right, .teacher-profile-left {
+        min-width: unset;
+        width: 100%;
+        align-items: stretch;
+    }
+    .teacher-info-card, .timetable-card, .hours-card {
+        min-width: unset;
+        width: 100%;
+    }
+} 

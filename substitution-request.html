@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Substitution Request</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="student-dashboard-bg">
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <span class="sidebar-close">&#10005;</span>
+            <div class="sidebar-user">
+                <span class="sidebar-user-icon">&#128100;</span>
+                <span class="sidebar-user-info">RAHUL,ASST.PROF</span>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="teacher.html">MY TIMETABLE</a>
+            <a href="teacher-profile.html">PROFILE</a>
+            <a href="announcements-teacher.html">ANNOUNCEMENTS</a>
+            <a href="#" class="active">Substitution Request</a>
+        </nav>
+        <button class="logout-btn" onclick="window.location.href='index.html'">
+            <span class="logout-icon">&#x1F6AA;</span> LOGOUT
+        </button>
+    </div>
+    <div class="main-content">
+        <div class="topbar">
+            <span class="dashboard-title">SUBSTITUTION REQUEST</span>
+            <span class="topbar-icons">
+                <span class="topbar-icon">&#128221;</span>
+            </span>
+        </div>
+        <div class="substitution-request-content" style="display:flex; flex-direction:column; align-items:center; margin-top:2.5rem;">
+            <form class="substitution-form" style="background:#fff; border-radius:18px; box-shadow:0 4px 18px rgba(0,0,0,0.08); padding:2rem 2.5rem; max-width:400px; width:100%; margin-bottom:2.5rem;">
+                <h2 style="margin-top:0; color:#1976d2; font-size:1.3rem;">Request a Substitution</h2>
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required style="margin-bottom:1rem;">
+                <label for="period">Period</label>
+                <select id="period" name="period" required style="margin-bottom:1rem;">
+                    <option value="">Select Period</option>
+                    <option value="1">Period 1</option>
+                    <option value="2">Period 2</option>
+                    <option value="3">Period 3</option>
+                    <option value="4">Period 4</option>
+                    <option value="5">Period 5</option>
+                    <option value="6">Period 6</option>
+                </select>
+                <label for="class">Class</label>
+                <input type="text" id="class" name="class" placeholder="e.g. 5BTCS A" required style="margin-bottom:1rem;">
+                <label for="reason">Reason</label>
+                <textarea id="reason" name="reason" rows="3" placeholder="Enter reason..." required style="margin-bottom:1.2rem;"></textarea>
+                <button type="submit" class="login-btn" style="width:100%;">Submit Request</button>
+            </form>
+            <div class="recent-requests" style="width:100%; max-width:600px;">
+                <h3 style="color:#1976d2;">Recent Requests</h3>
+                <div class="announcement-card announcement-substitution">
+                    <span class="announcement-icon" style="color:#ff9800; font-size:1.3rem; margin-right:0.7rem;">&#128276;</span>
+                    <div>
+                        <div class="announcement-title">5BTCS A, Period 2</div>
+                        <div class="announcement-desc">Reason: Medical appointment</div>
+                        <div class="announcement-time">Requested: Today, 8:30 AM</div>
+                    </div>
+                </div>
+                <div class="announcement-card announcement-substitution">
+                    <span class="announcement-icon" style="color:#ff9800; font-size:1.3rem; margin-right:0.7rem;">&#128276;</span>
+                    <div>
+                        <div class="announcement-title">3BTCIOT, Period 5</div>
+                        <div class="announcement-desc">Reason: Conference</div>
+                        <div class="announcement-time">Requested: 2 days ago</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
